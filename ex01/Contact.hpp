@@ -6,17 +6,17 @@
 /*   By: afadouac <afadouac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 19:25:38 by afadouac          #+#    #+#             */
-/*   Updated: 2024/06/29 19:25:40 by afadouac         ###   ########.fr       */
+/*   Updated: 2024/09/12 04:05:02 by afadouac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COTACT_HPP
-#define COTACT_HPP
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <string>
 #include <iostream>
 
-class  Contact
+class Contact
 {
     private:
         std::string FirstName;
@@ -24,39 +24,24 @@ class  Contact
         std::string NickName;
         std::string PhoneNumber;
         std::string DarkestSecret;
-
+        int         Index;        
     public:
-        void    SetFirstName(std::string firstname);
+        void affichContact();
+        //seters
+        void SetFirstName(std::string firstname);
+        void SetLastName(std::string lastname);
+        void SetNickName(std::string nickname);
+        void SetPhoneNumber(std::string phonenumber);
+        void SetDarks(std::string darkestsecret);
+        void SetIndex(int index);
         
-        std::string  GetFirstName();
-        
-        void    SetLastName(std::string lastname);
-        
-        std::string  GetLastName();
-        
-        void    SetNickName(std::string nickname);
-        
-        std::string  GetNickName();
-        
-        void    SetPhoneNumber(std::string phonenumber);
-        
-        std::string  GetPhoneNumber();
-        
-        void    SetDarkestSecret(std::string darkestsecret);
-        
-        std::string  GetDarkestSecret();
-        
-        void AffichContact();
+        // geters 
+        std::string getFirstName();
+        std::string getLastName();
+        std::string getNickName();
+        std::string getPhoneNumber();
+        std::string getDarks();
+        int getIndex();
 };
-
-
-
-// Contact:: Contact()
-// {
-// }
-
-// Contact::~ Contact()
-// {
-// }
 
 #endif
